@@ -4,7 +4,7 @@ import TableContent from "./TableContent/TableContent";
 const Qualifications = () => {
   return (
     <div>
-      <h2 className={`${styles['quali-text']}`}>My Qualifications</h2>
+      <h2 className={`${styles['qualifications-container']} ${styles['quali-text']}`}>My Qualifications</h2>
 
       <div className={`${styles.grid}`}>
         {

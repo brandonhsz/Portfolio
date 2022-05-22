@@ -6,10 +6,8 @@
   align-items: center;
   text-align: center;
   margin-top: 5px;
-  /* transform: translateY(-100px); */
-  /* opacity: 0; */
-  backdrop-filter: blur(20px);
   animation: fade-in 1s ease 1 forwards;
+  backdrop-filter: blur(1px);
 }
 
 @keyframes fade-in {

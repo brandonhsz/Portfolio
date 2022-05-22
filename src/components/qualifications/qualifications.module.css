@@ -1,3 +1,7 @@
+.qualifications-container {
+  backdrop-filter: blur(1px);
+}
+
 .quali-text {
   text-align: center;
   font-size: 20px;

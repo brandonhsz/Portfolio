@@ -3,9 +3,11 @@ import Buttons from '../button/button';
 import { BsMouse } from 'react-icons/bs';
 import { AiFillHeart } from 'react-icons/ai';
 
+
+
 function Home() {
   return (
-    <div id='home' className={`${styles.container} ${styles["home-container"]}`}>
+    <div id='home' className={`${styles["home-container"]}`}>
       <div className={`${styles.logo}`}>
         <div className={`${styles["hover-show"]}`}>
           <span className={`${styles.circle}`}></span>
