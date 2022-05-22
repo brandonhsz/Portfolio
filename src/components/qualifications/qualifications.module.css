@@ -1,0 +1,45 @@
+.quali-text {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+
+.table-text {
+  text-align: center;
+  margin: 5px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10rem;
+  grid-row-gap: 7rem;
+  grid-auto-rows: minmax(50px, auto);
+
+  margin: 0 10rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

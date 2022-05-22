@@ -1,0 +1,18 @@
+export const qualificationsList = [
+  { "img": "https://cdn.svgporn.com/logos/html-5.svg", "name": "HTML5" },
+  { "img": "https://cdn.svgporn.com/logos/css-3.svg", "name": "CSS3" },
+  { "img": "https://cdn.svgporn.com/logos/javascript.svg", "name": "JavaScript" },
+  { "img": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png", "name": "React" },
+  { "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-128.png", "name": "Python" },
+  { "img": "https://cdn.svgporn.com/logos/typescript-icon.svg", "name": "TypeScript" },
+  { "img": "https://cdn.svgporn.com/logos/nodejs-icon.svg", "name": "NodeJs" },
+  { "img": "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg", "name": "MongoDB" },
+  { "img": "https://cdn.svgporn.com/logos/postgresql.svg", "name": "PostgreSql" },
+  { "img": "https://cdn.svgporn.com/logos/redux.svg", "name": "Redux" },
+  { "img": "https://seekicon.com/free-icon-download/golang_1.svg", "name": "Go" },
+  { "img": "https://cdn.svgporn.com/logos/nextjs-icon.svg", "name": "NextJs" },
+  { "img": "https://cdn.svgporn.com/logos/graphql.svg", "name": "GraphQL" },
+  { "img": "https://cdn.svgporn.com/logos/nestjs.svg", "name": "NestJs" },
+  { "img": "https://cdn.svgporn.com/logos/aws.svg", "name": "AWS" },
+  { "img": "https://cdn.svgporn.com/logos/docker-icon.svg", "name": "Docker" },
+]
