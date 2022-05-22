@@ -1,6 +1,5 @@
 import styles from "./contact.module.css";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
-import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 
 function Contact() {

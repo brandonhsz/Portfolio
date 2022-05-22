@@ -2,10 +2,10 @@ import styles from './header.module.css';
 
 function Header() {
   return (
-    <div id='home' className={`${styles.container} ${styles['header-container']} `}>
+    <div id='home' className={`${styles.container} ${styles["header-container"]} `}>
       <h3>
         <p>
-          I<span>'</span>m
+          I<span>&apos;</span>m
         </p>
         Brandon
       </h3>

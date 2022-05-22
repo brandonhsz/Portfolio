@@ -1,15 +1,13 @@
 import styles from './home.module.css';
-import img from '../props/myImage.jpg';
 import Buttons from '../button/button';
 import { BsMouse } from 'react-icons/bs';
 import { AiFillHeart } from 'react-icons/ai';
-import Image from 'next/image';
 
 function Home() {
   return (
-    <div id='home' className={`${styles.container} ${styles['home-container']}`}>
+    <div id='home' className={`${styles.container} ${styles["home-container"]}`}>
       <div className={`${styles.logo}`}>
-        <div className={`${styles['hover-show']}`}>
+        <div className={`${styles["hover-show"]}`}>
           <span className={`${styles.circle}`}></span>
           <span className={`${styles.circle}`}></span>
           <span className={`${styles.circle}`}></span>
@@ -34,7 +32,7 @@ function Home() {
       <h2>
         <span>About Me</span> <br />
         <p className={`${styles.description}`}>
-          Hi i'm Brandon, I'm a Communications and electronics student and i love all about web development, IOT, embedded systems.
+          Hi i&apos;m Brandon, I&apos;m a Communications and electronics student and i love all about web development, IOT, embedded systems.
         </p>
 
         <p className={`${styles.description2}`}>ELECTRONICS+PROGRAMMING == <AiFillHeart /> </p>
