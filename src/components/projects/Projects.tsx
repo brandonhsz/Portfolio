@@ -1,8 +1,12 @@
 import styles from "./projects.module.css";
 import Project from "./Project"
-import { projectsList } from '../../data/projects.data';
+import { Context } from "../../context/api.context";
+import { useContext } from "react";
 
 const Projects = () => {
+
+  const { projects: projectsList } = useContext(Context);
+
   return (
     <div id="projects" className={` ${styles['projects-container']}`}>
       <h1 className={`${styles['project-txt']}`}>Projects</h1>

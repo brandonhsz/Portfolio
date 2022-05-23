@@ -1,7 +1,11 @@
-import { qualificationsList } from "../../data/qualifications.data";
+import { useContext } from "react";
+import { Context } from "../../context/api.context";
 import styles from "./qualifications.module.css";
 import TableContent from "./TableContent/TableContent";
 const Qualifications = () => {
+
+  const { qualifications: qualificationsList } = useContext(Context);
+
   return (
     <div>
       <h2 className={`${styles['qualifications-container']} ${styles['quali-text']}`}>My Qualifications</h2>
@@ -21,5 +25,6 @@ const Qualifications = () => {
     </div>
   );
 };
+
 
 export default Qualifications;

@@ -3,21 +3,22 @@ import Home from "../src/components/home/home";
 import About from "../src/components/about/about";
 import Contact from "../src/components/contact/contact";
 import Navbar from "../src/components/nav/nav";
-import Projects from "../src/components/projects/Projects";
+import Projects from '../src/components/projects/Projects';
 import Footer from "../src/components/footer/footer";
 
 
 import Particles from 'react-tsparticles';
 import { loadFull } from "tsparticles";
-import { particlesConfig } from "../particles/particles.config";
+import { particlesConfig } from "../src/particles/particles.config";
+import axios from 'axios';
 
-const App = () => {
+import { ProviderApi } from "../src/context/api.context";
+
+const App = ({ qualifications, projects }) => {
 
   const particlesInit = async (main) => {
     await loadFull(main);
   };
-
-
   return (
     <>
       <Particles
@@ -31,18 +32,40 @@ const App = () => {
       <Header />
       <Navbar />
       <Home />
-      <About />
-      <Projects />
+
+      <ProviderApi
+        value={{
+          qualifications,
+          projects
+        }}
+      >
+        <About />
+        <Projects />
+
+      </ProviderApi>
+
+
+
       <Contact />
       <Footer />
     </>
   )
 }
 
-export async function getStaticProps() {
+export const getServerSideProps = async (ctx) => {
+  const qualificationsRes = await fetch(`${process.env.PAGE_URL}/api/qualifications`);
+  const qualifications = await qualificationsRes.json();
+
+  const projectsRes = await fetch(`${process.env.PAGE_URL}/api/projects`);
+  const projects = await projectsRes.json();
+
   return {
-    props: {},
+    props: {
+      qualifications: qualifications,
+      projects: projects
+    }
   }
 }
+
 
 export default App
