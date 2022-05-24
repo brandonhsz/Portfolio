@@ -10,7 +10,6 @@ import Footer from "../src/components/footer/footer";
 import Particles from 'react-tsparticles';
 import { loadFull } from "tsparticles";
 import { particlesConfig } from "../src/particles/particles.config";
-import axios from 'axios';
 
 import { ProviderApi } from "../src/context/api.context";
 
