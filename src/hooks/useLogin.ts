@@ -17,7 +17,7 @@ const useLogin = () => {
   }
 
   const handleSubmit = async () => {
-    const res = await fetch(`${process.env.PAGE_URL}/api/login`, {
+    const res = await fetch(`https://brandonhsz.xyz/api/login`, {
       method: 'POST',
       body: JSON.stringify(login),
     })
