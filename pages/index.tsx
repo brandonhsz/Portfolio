@@ -52,10 +52,10 @@ const App = ({ qualifications, projects }) => {
 }
 
 export const getStaticProps = async (ctx) => {
-  const qualificationsRes = await fetch(`${process.env.PAGE_URL}/api/qualifications`);
+  const qualificationsRes = await fetch(`https://brandonhsz.xyz/api/qualifications`);
   const qualifications = await qualificationsRes.json();
 
-  const projectsRes = await fetch(`${process.env.PAGE_URL}/api/projects`);
+  const projectsRes = await fetch(`https://brandonhsz.xyz/api/projects`);
   const projects = await projectsRes.json();
 
   return {

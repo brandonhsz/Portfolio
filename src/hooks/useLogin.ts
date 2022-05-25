@@ -23,6 +23,9 @@ const useLogin = () => {
     })
     const data = await res.json()
     console.log(data);
+
+    window.localStorage.setItem('token', data.token)
+
   }
 
   const resetLogin = () => {
