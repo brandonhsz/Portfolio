@@ -51,7 +51,7 @@ const App = ({ qualifications, projects }) => {
   )
 }
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const qualificationsRes = await fetch(`${process.env.PAGE_URL}/api/qualifications`);
   const qualifications = await qualificationsRes.json();
 
@@ -62,7 +62,8 @@ export const getServerSideProps = async (ctx) => {
     props: {
       qualifications: qualifications,
       projects: projects
-    }
+    },
+    revalidate: 43200
   }
 }
 
