@@ -7,8 +7,8 @@ interface IProps {
 
 const TableContent = ({ img, alt }: IProps) => {
   return (
-    <div>
-      <img className={`${styles.center}`} height="100px" src={img} alt={alt} />
+    <div className='flex flex-col justify-end'>
+      <img className={`${styles.center}`} height="180px" width="120px" src={img} alt={alt} />
       <p className={`${styles['table-text']}`}>{alt}</p>
     </div>
   )
