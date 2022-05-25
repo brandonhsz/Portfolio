@@ -37,7 +37,7 @@ function Home() {
           Hi i&apos;m Brandon, I&apos;m a Communications and electronics student and i love all about web development, IOT, embedded systems.
         </p>
 
-        <p className={`${styles.description2}`}>ELECTRONICS+PROGRAMMING == <AiFillHeart /> </p>
+        <p className={`${styles.description2} flex`}>ELECTRONICS+PROGRAMMING ==&ensp;<AiFillHeart /> </p>
       </h2>
 
       <Buttons />

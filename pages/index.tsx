@@ -2,7 +2,7 @@ import Header from "../src/components/header/header";
 import Home from "../src/components/home/home";
 import About from "../src/components/about/about";
 import Contact from "../src/components/contact/contact";
-import Navbar from "../src/components/nav/nav";
+import Navbar from "../src/components/nav/NavList";
 import Projects from '../src/components/projects/Projects';
 import Footer from "../src/components/footer/footer";
 

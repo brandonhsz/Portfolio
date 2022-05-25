@@ -2,7 +2,7 @@ import styles from "./button.module.css";
 
 function Buttons() {
   return (
-    <div className={`${styles.container} ${styles['button-container']}`}>
+    <div className={`${styles['button-container']}`}>
       <a href="#about" className={`${styles.btn} ${styles.pri}`}>
         Learn more
       </a>

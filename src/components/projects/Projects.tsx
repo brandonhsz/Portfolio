@@ -8,7 +8,7 @@ const Projects = () => {
   const { projects: projectsList } = useContext(Context);
 
   return (
-    <div id="projects" className={` ${styles['projects-container']}`}>
+    <div id="projects" className={` mx-16 ${styles['projects-container']}`}>
       <h1 className={`${styles['project-txt']}`}>Projects</h1>
 
       {

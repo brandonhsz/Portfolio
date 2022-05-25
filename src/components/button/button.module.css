@@ -1,9 +1,7 @@
-
-
 .button-container {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 80px;
   width: 60%;
   padding: 0;
@@ -160,7 +158,6 @@
     backdrop-filter: blur(20px);
   }
 }
-
 
 @media (max-width: 400px) {
   .button-container {
