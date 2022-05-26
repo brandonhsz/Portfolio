@@ -1,16 +1,20 @@
 import { useRouter } from 'next/router';
-import useLogin from 'src/hooks/useLogin';
-import { useEffect } from 'react';
+import jwt from 'jsonwebtoken'
 
 const Dashboard = () => {
-
-  const { auth } = useLogin();
   const router = useRouter();
 
-  useEffect(() => {
-    if (auth()) router.push('/admin/login');
-  }, [])
+  const token = localStorage.getItem('token')
 
+  if (!token) {
+    router.push('/admin/login')
+  } else {
+    try {
+      jwt.verify(token, process.env.NEXT_PUBLIC_SECRET)
+    } catch (e) {
+      router.push('/admin/login')
+    }
+  }
   return (
     <div>Dashboard</div>
   )

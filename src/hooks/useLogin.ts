@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ILogin } from '../../interfaces/login.interface';
-import jwt from 'jsonwebtoken';
 const useLogin = () => {
 
 
@@ -38,20 +37,7 @@ const useLogin = () => {
     })
   }
 
-  const auth = () => {
 
-    const token = localStorage.getItem('token')
-
-    if (!token) {
-      return true
-    } else {
-      try {
-        jwt.verify(token, process.env.NEXT_PUBLIC_SECRET)
-      } catch (e) {
-        return true
-      }
-    }
-  }
 
   return {
     login,
@@ -60,7 +46,6 @@ const useLogin = () => {
     handleSubmit,
     token,
     setToken,
-    auth
   }
 }
 
