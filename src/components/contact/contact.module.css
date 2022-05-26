@@ -106,6 +106,7 @@
     height: 400px;
     width: 80%;
     /* background-color: rgba(0, 0, 0, 0.322); */
+    background-color: #ffffff18;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -175,6 +176,7 @@
     height: 280px;
     width: 95%;
     /* background-color: rgba(0, 0, 0, 0.322); */
+    background-color: #ffffff18;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -244,6 +246,7 @@
     height: 280px;
     width: 95%;
     /* background-color: rgba(0, 0, 0, 0.322); */
+    background-color: #ffffff18;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -313,6 +316,7 @@
     height: 290px;
     width: 95%;
     /* background-color: rgba(0, 0, 0, 0.322); */
+    background-color: #ffffff18;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
