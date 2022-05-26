@@ -1,11 +1,18 @@
 import Input from "../input/Input"
 import styles from "./login.module.css"
 import useLogin from "../../../hooks/useLogin"
+import { useEffect } from 'react';
+import { useRouter } from "next/router";
 const Login = () => {
 
-  const { handleLogin, handleSubmit } = useLogin()
-
-
+  const { handleLogin, handleSubmit, token } = useLogin()
+  const router = useRouter()
+  useEffect(() => {
+    if (token) {
+      window.localStorage.setItem('token', token)
+      router.push('/admin/dashboard')
+    }
+  }, [token])
 
   return (
     <div className={`${styles.container}`}>

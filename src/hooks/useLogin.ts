@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { ILogin } from '../../interfaces/login.interface';
-
+import jwt from 'jsonwebtoken';
 const useLogin = () => {
+
 
   const [login, setLogin] = useState<ILogin | any>({
     name: '',
     password: '',
   })
+
+  const [token, setToken] = useState<string>('');
 
   const handleLogin = (e: any) => {
     e.preventDefault();
@@ -24,9 +27,7 @@ const useLogin = () => {
       body: JSON.stringify(login),
     })
     const data = await res.json()
-    console.log(data);
-
-    window.localStorage.setItem('token', data.token)
+    setToken(data.token)
 
   }
 
@@ -37,11 +38,29 @@ const useLogin = () => {
     })
   }
 
+  const auth = () => {
+
+    const token = localStorage.getItem('token')
+
+    if (!token) {
+      return true
+    } else {
+      try {
+        jwt.verify(token, process.env.NEXT_PUBLIC_SECRET)
+      } catch (e) {
+        return true
+      }
+    }
+  }
+
   return {
     login,
     handleLogin,
     resetLogin,
-    handleSubmit
+    handleSubmit,
+    token,
+    setToken,
+    auth
   }
 }
 
