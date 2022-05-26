@@ -1,20 +1,24 @@
+import Cors from "cors"
+import initMiddleware from "libs/init.middleware"
 import { Mongo } from "../../../src/utils/Mongo.config"
 import Admin from "../../../src/Models/Admins.schema"
 import jwt from "jsonwebtoken"
-import NextCors from 'nextjs-cors';
 
+const cors = initMiddleware(
+  // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+  Cors({
+    // Only allow requests with GET, POST and OPTIONS
+    methods: ['GET', 'POST', 'OPTIONS'],
+    origin: "*",
+  })
+)
 
 const db = Mongo.getInstance()
 db.connect()
 
 export default async function getMethod(req, res) {
 
-  await NextCors(req, res, {
-    // Options
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-    origin: '*',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-  });
+  await cors(req, res)
 
   const { name, password } = JSON.parse(req.body)
 
