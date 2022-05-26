@@ -18,6 +18,7 @@ const useLogin = () => {
 
   const handleSubmit = async () => {
     const res = await fetch(`https://brandonhsz.xyz/api/login`, {
+      credentials: 'include',
       method: 'POST',
       body: JSON.stringify(login),
       headers: {
