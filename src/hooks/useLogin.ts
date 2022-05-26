@@ -22,6 +22,7 @@ const useLogin = () => {
       body: JSON.stringify(login),
       headers: {
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
       }
     })
     const data = await res.json()
