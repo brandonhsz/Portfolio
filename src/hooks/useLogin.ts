@@ -17,7 +17,7 @@ const useLogin = () => {
   }
 
   const handleSubmit = async () => {
-    const res = await fetch(`https://brandonhsz.xyz/api/login`, {
+    const res = await fetch(`https://jwt-brandon.herokuapp.com/login`, {
       mode: 'cors',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
