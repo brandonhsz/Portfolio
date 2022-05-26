@@ -20,7 +20,7 @@ export default async function getMethod(req, res) {
 
   await cors(req, res)
 
-  const { name, password } = JSON.parse(req.body)
+  const { name, password } = req.body
 
   const isAdmin = await Admin.findOne({ name: name })
 

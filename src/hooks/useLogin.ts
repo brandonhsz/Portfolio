@@ -17,14 +17,11 @@ const useLogin = () => {
   }
 
   const handleSubmit = async () => {
-    const res = await fetch(`https://portfolio-brandonhsz.vercel.app/api/login`, {
-      credentials: 'include',
+    const res = await fetch(`https://brandonhsz.xyz/api/login`, {
+      mode: 'cors',
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(login),
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': 'true',
-      }
     })
     const data = await res.json()
     console.log(data);
