@@ -17,7 +17,7 @@ const useLogin = () => {
   }
 
   const handleSubmit = async () => {
-    const res = await fetch(`https://brandonhsz.xyz/api/login`, {
+    const res = await fetch(`https://portfolio-brandonhsz.vercel.app/api/login`, {
       credentials: 'include',
       method: 'POST',
       body: JSON.stringify(login),
