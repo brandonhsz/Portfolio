@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 80vh;
-  margin-top: 100px;
+  min-height: 50vh;
+  /* margin-top: 100px; */
   padding: 50px;
   backdrop-filter: blur(1px);
 }
@@ -31,7 +31,8 @@
   position: inherit;
   height: 280px;
   width: 30%;
-  background-color: rgba(0, 0, 0, 0.322);
+
+  background-color: rgba(255, 255, 255, 0.096);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -41,7 +42,7 @@
 }
 
 .contact-container .contact:hover {
-  background-color: rgba(255, 255, 255, 0.096);
+  background-color: rgba(0, 0, 0, 0.322);
   transform: scale(1.1);
 }
 
@@ -103,7 +104,7 @@
     position: inherit;
     height: 400px;
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.322);
+    /* background-color: rgba(0, 0, 0, 0.322); */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -172,7 +173,7 @@
     position: inherit;
     height: 280px;
     width: 95%;
-    background-color: rgba(0, 0, 0, 0.322);
+    /* background-color: rgba(0, 0, 0, 0.322); */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -241,7 +242,7 @@
     position: inherit;
     height: 280px;
     width: 95%;
-    background-color: rgba(0, 0, 0, 0.322);
+    /* background-color: rgba(0, 0, 0, 0.322); */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -310,7 +311,7 @@
     position: inherit;
     height: 290px;
     width: 95%;
-    background-color: rgba(0, 0, 0, 0.322);
+    /* background-color: rgba(0, 0, 0, 0.322); */
     border-radius: 20px;
     display: flex;
     flex-direction: column;

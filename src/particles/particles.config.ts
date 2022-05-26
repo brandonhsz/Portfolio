@@ -29,9 +29,9 @@ export const particlesConfig: any = {
       opacity: 0.2,
       width: 2,
     },
-    collisions: {
-      enable: true,
-    },
+    // collisions: {
+    //   enable: true,
+    // },
     move: {
       direction: "none",
       enable: true,

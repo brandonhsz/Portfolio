@@ -7,11 +7,14 @@ const Login = () => {
 
   const { handleLogin, handleSubmit, token } = useLogin()
   const router = useRouter()
+
   useEffect(() => {
+
     if (token) {
       window.localStorage.setItem('token', token)
       router.push('/admin/dashboard')
     }
+
   }, [token])
 
   return (
@@ -19,7 +22,7 @@ const Login = () => {
       <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
 
         <a href="#name">
-          <h1 className=" text-center font-extrabold bg-gray-900 rounded-full cursor-pointer">ADMIN PANEL</h1>
+          <h1 className=" text-center font-extrabold bg-gris-claro rounded-full cursor-pointer hover:bg-gris-oscuro">ADMIN PANEL</h1>
         </a>
 
         <form>
@@ -48,12 +51,12 @@ const Login = () => {
 
           </div>
 
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left flex justify-center">
 
             <input
               type="button"
               value="LOGIN"
-              className="bg-gray-900 cursor-pointer px-10 py-1 rounded-lg border border-solid hover:border-solid hover:border-blue-900 focus:outline-none focus:shadow-outline"
+              className="bg-gris-claro cursor-pointer px-10 py-1 rounded-lg border border-solid hover:border-solid hover:border-blue-900 hover:bg-gris-oscuro focus:outline-none focus:shadow-outline"
               onClick={() => { handleSubmit() }}
             />
 

@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
+  min-height: 50vh;
   margin-top: 100px;
   backdrop-filter: blur(1px);
 }
@@ -74,15 +74,15 @@
   border: 2px solid var(--color-sec-light);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .projects-container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
-    margin-top: 10px;
+    min-height: 50vh;
+    /* margin-top: 10px; */
   }
 
   .projects-container .project {
@@ -153,8 +153,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
-    margin-top: 10px;
+    min-height: 50vh;
+    /* margin-top: 10px; */
     padding: 10px;
   }
 
@@ -216,78 +216,5 @@
     position: absolute;
     top: -55px;
     right: 10px;
-  }
-}
-
-@media (max-width: 375px) {
-  .projects-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-height: 100vh;
-    margin-top: 10px;
-    padding: 10px;
-  }
-
-  .projects-container .project {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    background: rgba(0, 0, 0, 0.116);
-    padding: 15px;
-    border-radius: 50px;
-    backdrop-filter: blur(20px);
-  }
-  .projects-container .project .project-img {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    /* background: rgb(5, 7, 37) url(../props/img3.jpg); */
-    background-size: cover;
-    background-position: center;
-    border: 2px solid var(--color-sec-light);
-  }
-
-  .projects-container .project .project-info {
-    position: relative;
-    margin-left: 10px;
-    font-family: "Open Sans Condensed";
-    max-width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .projects-container .project .project-info .name {
-    font-size: 19px;
-    font-weight: 500;
-    letter-spacing: 2px;
-  }
-  .projects-container .project .project-info .position {
-    font-size: 14px;
-    font-weight: 200;
-    letter-spacing: 2px;
-  }
-  .projects-container .project .project-info .about {
-    margin-top: 10px;
-    font-weight: 100;
-    font-size: 16px;
-  }
-  .projects-container .project .project-info a.contact-project {
-    background-color: var(--color-sec-light);
-    padding: 15px 25px;
-    font-size: 15px;
-    border-radius: 50px;
-    transition: 0.1s ease;
-    position: absolute;
-    top: -55px;
-    right: 5px;
   }
 }

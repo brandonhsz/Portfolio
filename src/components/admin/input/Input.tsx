@@ -12,7 +12,7 @@ const Input = ({ type, id, placeholder, handleLogin }) => {
           type={type}
           id={id}
           name={id}
-          className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-900 focus:outline-none peer"
+          className="form-control text-white bg-gris-claro block w-full px-4 py-2 text-xl font-normal bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:bg-gris-oscuro focus:border-blue-900 focus:outline-none peer"
           placeholder={" "}
           onChange={(e) => { handleLogin(e) }}
         />
