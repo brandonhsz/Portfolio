@@ -1,37 +1,42 @@
-import Cors from "cors"
-import initMiddleware from "libs/init.middleware"
-import { Mongo } from "../../../src/utils/Mongo.config"
-import Admin from "../../../src/Models/Admins.schema"
-import jwt from "jsonwebtoken"
 
-const cors = initMiddleware(
-  // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
-  Cors({
-    // Only allow requests with GET, POST and OPTIONS
-    methods: ['GET', 'POST', 'OPTIONS'],
-    origin: "*",
-  })
-)
+// import { Mongo } from "../../../src/utils/Mongo.config"
+// import Admin from "../../../src/Models/Admins.schema"
+// import jwt from "jsonwebtoken"
 
-const db = Mongo.getInstance()
-db.connect()
+// const cors = initMiddleware(
+//   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+//   Cors({
+//     // Only allow requests with GET, POST and OPTIONS
+//     methods: ['GET', 'POST', 'OPTIONS'],
+//     origin: "*",
+//   })
+// )
 
-export default async function getMethod(req, res) {
+// const db = Mongo.getInstance()
+// db.connect()
 
-  await cors(req, res)
+// export default async function getMethod(req, res) {
 
-  const { name, password } = req.body
+//   await cors(req, res)
 
-  const isAdmin = await Admin.findOne({ name: name })
+//   const { name, password } = req.body
 
-  if (!isAdmin) return res.status(401).json({ message: "Invalid username" })
+//   const isAdmin = await Admin.findOne({ name: name })
 
-  if (isAdmin.password !== password) return res.status(401).json({ message: "Invalid password" })
+//   if (!isAdmin) return res.status(401).json({ message: "Invalid username" })
 
-  const token = jwt.sign({ id: isAdmin._id }, process.env.JWT_SECRET, { expiresIn: "1h" })
+//   if (isAdmin.password !== password) return res.status(401).json({ message: "Invalid password" })
 
+//   const token = jwt.sign({ id: isAdmin._id }, process.env.JWT_SECRET, { expiresIn: "1h" })
+
+//   res.json({
+//     message: "Login success",
+//     token
+//   })
+// }
+
+export default function building(req, res) {
   res.json({
-    message: "Login success",
-    token
+    message: "Building",
   })
-}
+} 
