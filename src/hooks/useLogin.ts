@@ -20,6 +20,9 @@ const useLogin = () => {
     const res = await fetch(`https://brandonhsz.xyz/api/login`, {
       method: 'POST',
       body: JSON.stringify(login),
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      }
     })
     const data = await res.json()
     console.log(data);
