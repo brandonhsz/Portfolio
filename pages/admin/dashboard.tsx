@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import useLogin from 'src/hooks/useLogin';
 import { useEffect } from 'react';
 
-const dashboard = () => {
+const Dashboard = () => {
 
   const { auth } = useLogin();
   const router = useRouter();
@@ -12,8 +12,8 @@ const dashboard = () => {
   }, [])
 
   return (
-    <div>dashboard</div>
+    <div>Dashboard</div>
   )
 }
 
-export default dashboard
+export default Dashboard
