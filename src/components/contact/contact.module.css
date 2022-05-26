@@ -32,7 +32,8 @@
   height: 280px;
   width: 30%;
 
-  background-color: rgba(255, 255, 255, 0.096);
+  /* background-color: rgba(255, 255, 255, 0.095); */
+  background-color: #ffffff18;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
