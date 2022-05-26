@@ -4,7 +4,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 function Contact() {
   return (
-    <div id="contact" className={`${styles.container} ${styles['contact-container']}`}>
+    <div id="contact" className={`${styles['contact-container']}`}>
       <h1>Contact Me</h1>
       <div className={`${styles['contact-links']}`}>
 
